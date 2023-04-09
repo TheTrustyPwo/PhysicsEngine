@@ -43,10 +43,6 @@ int32_t main(int32_t, char *[]) {
         if (world.getObjectsCount() < max_objects_count && clock.getElapsedTime().asSeconds() >= object_spawn_delay) {
             clock.restart();
             auto &object = world.addObject(object_spawn_position, 10.0f);
-//            const float t      = world.getTime();
-//            const float angle  = max_angle * sin(t) + Math::PI * 0.5f;
-//            world.setObjectVelocity(object, object_spawn_speed * Vector2f{cos(angle), sin(angle)});
-//            object.color = getRainbow(t);
         }
 
         world.update();
