@@ -70,7 +70,7 @@ public:
 
 private:
     uint32_t m_sub_steps = 1;
-    Vector2f m_gravity = {0.0f, 1000.0f};
+    Vector2f m_gravity = {0.0f, 981.0f};
     Vector2f m_constraint_center;
     float m_constraint_radius = 100.0f;
     std::vector<RigidBody> m_objects;
