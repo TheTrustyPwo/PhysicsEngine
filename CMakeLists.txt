@@ -14,11 +14,6 @@ if (SFML_FOUND)
     target_link_libraries(${PROJECT_NAME} ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})
 endif()
 
-set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 17)
-if (UNIX)
-    target_link_libraries(${PROJECT_NAME} pthread)
-endif (UNIX)
-
 # Copy dlls to build
 if(WIN32)
     file(GLOB BINARY_DEP_DLLS "${SFML_INCLUDE_DIR}/../bin/*.dll")
