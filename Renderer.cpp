@@ -1,7 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 
-#include "World.hpp"
+#include "World.h"
 
 using namespace sf;
 
@@ -9,7 +9,7 @@ class Renderer {
 public:
     explicit Renderer(RenderTarget& target) : m_target(target) {};
 
-    void render(const World& world) const {
+    void render(World world) {
         const Vector3f constraint = world.getConstraint();
         CircleShape constraint_background{constraint.z};
         constraint_background.setOrigin(constraint.z, constraint.z);
